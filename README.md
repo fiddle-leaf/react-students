@@ -2,10 +2,10 @@
 Practice repeating knowledge about React so far!
 
 ## Assignment Goals
-- Initialize state using useState
-- Pass info as props from a parent to a child component
-- Map arrays of info to components
-- 
+1. Use the array of "student" data to initialize state as an object with a students key in the `<App>` component
+2. Code the `<App>` component to display a `<Student>` component for each student object in the studentsarray being held in state.
+3. Code the `<Student>` component so it renders the student's name & bio properties and a `<Score>` component for each score object in the student's scores property.
+4. Code the `<Score>` component so it renders the score object's date & score properties.
 
 ## Data
 ```
@@ -70,4 +70,5 @@ Practice repeating knowledge about React so far!
   }
 ]
 ```
+
 
