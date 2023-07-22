@@ -1,4 +1,5 @@
 $light: hsl(333, 70%, 92%)
+$med: hsl(333, 75%, 86%)
 $bit: 1em
 
 .App 
@@ -10,6 +11,10 @@ $bit: 1em
 .flex 
     display: flex
 
+.rounded
+    background: $light
+    outline: 0.1em solid $med
+    border-radius: 0.5em
 
 header
     @extend .flex
@@ -18,7 +23,6 @@ header
 
     ul
         flex: 0 1 1
-        background: $light
         padding-inline: 0
         padding: $bit
         list-style-position: inside
@@ -28,7 +32,7 @@ header
         text-align: center
         align-self: center
         padding: calc($bit/4) calc($bit/2)
-        border-bottom: 0.5em solid $light
+        border-bottom: 0.5em solid $med
 
 div.scores
     @extend .flex
@@ -37,11 +41,12 @@ div.scores
 
     div
         flex: 0 1 1
-        background: $light
         padding-inline: $bit
-        outline: 0.1em solid hsl(333, 92%, 86%)
-        border-radius: 0.5em
 
 p.copyright
     text-align: center
     padding-top: $bit
+
+header>ul,
+div.scores>div
+    @extend .rounded
