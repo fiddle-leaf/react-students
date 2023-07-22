@@ -1,0 +1,47 @@
+$light: hsl(333, 70%, 92%)
+$bit: 1em
+
+.App 
+    max-width: 1000px
+    margin: 0 auto
+    padding: $bit
+
+
+.flex 
+    display: flex
+
+
+header
+    @extend .flex
+    justify-content: space-evenly
+    gap: $bit
+
+    ul
+        flex: 0 1 1
+        background: $light
+        padding-inline: 0
+        padding: $bit
+        list-style-position: inside
+    
+    h2 
+        flex: 0 1 1
+        text-align: center
+        align-self: center
+        padding: calc($bit/4) calc($bit/2)
+        border-bottom: 0.5em solid $light
+
+div.scores
+    @extend .flex
+    justify-content: space-around
+    gap: $bit
+
+    div
+        flex: 0 1 1
+        background: $light
+        padding-inline: $bit
+        outline: 0.1em solid hsl(333, 92%, 86%)
+        border-radius: 0.5em
+
+p.copyright
+    text-align: center
+    padding-top: $bit
